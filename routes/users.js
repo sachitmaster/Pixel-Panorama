@@ -1,7 +1,8 @@
+require('dotenv').config()
 const mongoose =  require('mongoose')
 const plm = require('passport-local-mongoose')
 
-mongoose.connect('mongodb+srv://sachitkumarsahu6:QDo4u55akvTsNTW9@cluster0.mmjrsjm.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect(`mongodb+srv://sachitkumarsahu6:${process.env.PASS}@cluster0.mmjrsjm.mongodb.net/?retryWrites=true&w=majority`)
 
 // Define the user schema
 const userSchema =  mongoose.Schema({
